@@ -764,9 +764,6 @@ video {
 .mt-6 {
   margin-top: 1.5rem;
 }
-.ml-10 {
-  margin-left: 2.5rem;
-}
 .block {
   display: block;
 }
@@ -830,26 +827,17 @@ video {
 .h-\[32rem\] {
   height: 32rem;
 }
-.h-\[480px\] {
-  height: 480px;
-}
 .h-full {
   height: 100%;
 }
 .max-h-\[90vh\] {
   max-height: 90vh;
 }
-.min-h-\[210px\] {
-  min-height: 210px;
-}
-.min-h-screen {
-  min-height: 100vh;
-}
 .min-h-\[220px\] {
   min-height: 220px;
 }
-.min-h-\[250px\] {
-  min-height: 250px;
+.min-h-screen {
+  min-height: 100vh;
 }
 .w-10 {
   width: 2.5rem;
@@ -927,9 +915,6 @@ video {
 .flex-1 {
   flex: 1 1 0%;
 }
-.flex-shrink-0 {
-  flex-shrink: 0;
-}
 .shrink-0 {
   flex-shrink: 0;
 }
@@ -969,15 +954,6 @@ video {
 }
 .animate-pulse {
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-@keyframes spin {
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-.animate-spin {
-  animation: spin 1s linear infinite;
 }
 .cursor-default {
   cursor: default;
@@ -1086,9 +1062,6 @@ video {
 }
 .scroll-smooth {
   scroll-behavior: smooth;
-}
-.whitespace-nowrap {
-  white-space: nowrap;
 }
 .whitespace-pre-wrap {
   white-space: pre-wrap;
@@ -1201,9 +1174,6 @@ video {
 .border-violet-500\/20 {
   border-color: rgb(139 92 246 / 0.2);
 }
-.border-cyan-500\/35 {
-  border-color: rgb(6 182 212 / 0.35);
-}
 .bg-\[\#05080f\] {
   --tw-bg-opacity: 1;
   background-color: rgb(5 8 15 / var(--tw-bg-opacity, 1));
@@ -1294,29 +1264,17 @@ video {
 .bg-slate-900\/90 {
   background-color: rgb(15 23 42 / 0.9);
 }
-.bg-slate-950\/70 {
-  background-color: rgb(2 6 23 / 0.7);
-}
 .bg-slate-950\/80 {
   background-color: rgb(2 6 23 / 0.8);
 }
-.bg-slate-950\/85 {
-  background-color: rgb(2 6 23 / 0.85);
+.bg-slate-950\/90 {
+  background-color: rgb(2 6 23 / 0.9);
 }
 .bg-transparent {
   background-color: transparent;
 }
 .bg-violet-500\/10 {
   background-color: rgb(139 92 246 / 0.1);
-}
-.bg-slate-950\/90 {
-  background-color: rgb(2 6 23 / 0.9);
-}
-.bg-slate-900\/95 {
-  background-color: rgb(15 23 42 / 0.95);
-}
-.bg-slate-950\/95 {
-  background-color: rgb(2 6 23 / 0.95);
 }
 .bg-gradient-to-br {
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
@@ -1511,13 +1469,13 @@ video {
   padding-top: 0.875rem;
   padding-bottom: 0.875rem;
 }
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 .pb-20 {
   padding-bottom: 5rem;
@@ -1822,10 +1780,6 @@ video {
 }
 .backdrop-blur-xl {
   --tw-backdrop-blur: blur(24px);
-  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-}
-.backdrop-blur-2xl {
-  --tw-backdrop-blur: blur(40px);
   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 .transition {
@@ -2133,14 +2087,6 @@ body {
 
   .sm\:flex {
     display: flex;
-  }
-
-  .sm\:h-\[540px\] {
-    height: 540px;
-  }
-
-  .sm\:max-w-2xl {
-    max-width: 42rem;
   }
 
   .sm\:grid-cols-2 {
