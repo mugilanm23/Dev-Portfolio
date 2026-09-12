@@ -9,8 +9,6 @@ import {
   Menu,
   X,
   Code2,
-  Sparkles,
-  ExternalLink,
 } from "lucide-react";
 
 const navLinks = [
@@ -20,6 +18,7 @@ const navLinks = [
   { name: "Experience", href: "#experience" },
   { name: "Projects", href: "#projects" },
   { name: "Achievements", href: "#achievements" },
+  { name: "Volunteering", href: "#volunteering" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -122,7 +121,7 @@ export default function Navbar() {
             <Github className="w-4 h-4" />
           </a>
           <a
-            href="https://linkedin.com/in/mugilan-m"
+            href="https://www.linkedin.com/in/mugilan-m23"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 rounded-lg bg-slate-900/80 border border-slate-800 text-slate-300 hover:text-cyan-400 hover:border-cyan-500/40 transition-all hover:scale-105"
@@ -131,12 +130,13 @@ export default function Navbar() {
             <Linkedin className="w-4 h-4" />
           </a>
           <a
-            href="#contact"
-            onClick={(e) => handleNavClick(e, "#contact")}
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-1.5 text-xs font-semibold px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all"
           >
             <FileText className="w-3.5 h-3.5" />
-            <span>Resume / Hire</span>
+            <span>Resume</span>
           </a>
         </div>
 
@@ -180,12 +180,20 @@ export default function Navbar() {
                   <Github className="w-4 h-4" /> GitHub
                 </a>
                 <a
-                  href="https://linkedin.com/in/mugilan-m"
+                  href="https://www.linkedin.com/in/mugilan-m23"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-xs font-medium text-slate-300 hover:text-cyan-400"
                 >
                   <Linkedin className="w-4 h-4" /> LinkedIn
+                </a>
+                <a
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-xs font-medium text-cyan-400 hover:text-cyan-300"
+                >
+                  <FileText className="w-4 h-4" /> Resume
                 </a>
               </div>
             </div>

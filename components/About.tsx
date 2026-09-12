@@ -53,7 +53,7 @@ export default function About() {
                 <div className="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center">
                   <Code className="w-5 h-5 text-cyan-400" />
                 </div>
-                <h4 className="text-xl font-bold text-white">Full Stack &amp; AI Developer</h4>
+                <h4 className="text-xl font-bold text-white">Forward Deployed Engineer &amp; AI Developer</h4>
               </div>
               <p className="text-slate-300 leading-relaxed mb-4 text-sm sm:text-base">
                 I am a Computer Science Engineering student driven by building scalable web architectures, AI-empowered systems, and intuitive user experiences. My focus spans robust backend development, modern responsive frontends, Retrieval-Augmented Generation (RAG), and Natural Language Processing.

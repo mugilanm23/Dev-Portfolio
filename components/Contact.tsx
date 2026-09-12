@@ -14,16 +14,51 @@ export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formState.name || !formState.email || !formState.message) return;
     
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
+    setErrorMessage("");
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/mugilanm23112005@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: formState.name,
+          email: formState.email,
+          _subject: formState.subject || `Portfolio DM from ${formState.name}`,
+          message: formState.message,
+          _captcha: "false",
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success !== "false") {
+        setSubmitted(true);
+        setFormState({ name: "", email: "", subject: "", message: "" });
+      } else {
+        throw new Error(data.message || "Failed to send message via FormSubmit");
+      }
+    } catch (err) {
+      console.error("Form submit error:", err);
+      // Fallback: Open pre-filled mail client if API request is blocked
+      const subject = encodeURIComponent(formState.subject || "Portfolio DM / Inquiry");
+      const body = encodeURIComponent(
+        `Name: ${formState.name}\nEmail: ${formState.email}\n\nMessage:\n${formState.message}`
+      );
+      window.location.href = `mailto:mugilanm23112005@gmail.com?subject=${subject}&body=${body}`;
       setSubmitted(true);
-      setFormState({ name: "", email: "", subject: "", message: "" });
-    }, 800);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -140,7 +175,7 @@ export default function Contact() {
               </a>
 
               <a
-                href="https://linkedin.com/in/mugilan-m"
+                href="https://www.linkedin.com/in/mugilan-m23"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 p-4 rounded-2xl bg-slate-900/60 border border-slate-800/80 hover:border-purple-500/40 hover:bg-slate-900 transition-all group"
@@ -151,7 +186,7 @@ export default function Contact() {
                 <div>
                   <span className="text-[11px] font-mono text-slate-400 uppercase">LinkedIn</span>
                   <div className="text-sm font-semibold text-white group-hover:text-purple-300 transition-colors">
-                    mugilan-m
+                    mugilan-m23
                   </div>
                 </div>
               </a>

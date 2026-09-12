@@ -28,14 +28,14 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-10 overflow-y-auto">
+      <div className="fixed inset-0 z-[100] flex items-start justify-center pt-20 sm:pt-24 pb-8 px-4 sm:px-6 overflow-y-auto">
         {/* Backdrop */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
-          className="fixed inset-0 bg-[#080c14]/80 backdrop-blur-xl"
+          className="fixed inset-0 bg-[#080c14]/85 backdrop-blur-xl"
         />
 
         {/* Modal Window */}
@@ -44,7 +44,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           transition={{ type: "spring", stiffness: 300, damping: 25 }}
-          className="relative w-full max-w-3xl glass-panel-glow p-6 sm:p-8 rounded-3xl border border-cyan-500/30 z-10 my-8 shadow-2xl max-h-[90vh] overflow-y-auto"
+          className="relative w-full max-w-3xl glass-panel-glow p-6 sm:p-8 rounded-3xl border border-cyan-500/30 z-10 my-auto shadow-2xl max-h-[calc(100vh-7rem)] overflow-y-auto"
         >
           {/* Close Button */}
           <button

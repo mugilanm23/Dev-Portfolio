@@ -142,9 +142,15 @@ export default function Achievements() {
                 </p>
               </div>
 
-              <div className="mt-3 pt-2 border-t border-slate-800/60 text-[10px] font-mono text-slate-500 flex items-center justify-between">
-                <span>Verified Credential</span>
-                <ShieldCheck className="w-3 h-3 text-cyan-400/60" />
+              <div className="mt-3 pt-2 border-t border-slate-800/60 flex items-center justify-between">
+                <a
+                  href="#contact"
+                  aria-label={`View Certificate for ${cert.name}`}
+                  className="inline-flex items-center gap-1 text-[11px] font-mono text-cyan-400 hover:text-cyan-300 font-semibold transition-colors"
+                >
+                  <span>View Certificate</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
               </div>
             </motion.div>
           ))}

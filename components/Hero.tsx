@@ -34,7 +34,7 @@ export default function Hero() {
               className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/90 border border-cyan-500/30 text-cyan-400 text-xs font-semibold tracking-wide uppercase shadow-lg shadow-cyan-500/10 mb-6 backdrop-blur-md"
             >
               <Sparkles className="w-3.5 h-3.5 animate-pulse text-cyan-400" />
-              <span>CSE Student @ CIT &bull; Full Stack &amp; AI Developer</span>
+              <span>CSE Student @ CIT &bull; Forward Deployed Engineer &amp; AI Developer</span>
             </motion.div>
 
             {/* Hero Main Title & Name */}
@@ -57,11 +57,11 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-base sm:text-xl font-semibold text-slate-300 mb-6 flex flex-wrap items-center gap-2 sm:gap-3"
             >
-              <span className="text-cyan-400">Full Stack Developer</span>
+              <span className="text-cyan-400">Forward Deployed Engineer</span>
               <span className="text-slate-600">&bull;</span>
-              <span className="text-purple-400">AI Enthusiast</span>
+              <span className="text-purple-400">AI Developer</span>
               <span className="text-slate-600">&bull;</span>
-              <span className="text-emerald-400">Problem Solver</span>
+              <span className="text-emerald-400">Product Manager</span>
             </motion.div>
 
             {/* Headline */}
@@ -81,7 +81,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-sm sm:text-base text-slate-400 max-w-xl mb-8 leading-relaxed"
             >
-              Computer Science Engineering student passionate about full-stack development, AI, NLP, RAG systems, real-time applications and algorithmic problem solving.
+              Computer Science Engineering student passionate about forward deployed engineering, AI, NLP, RAG systems, product management, real-time applications and algorithmic problem solving.
             </motion.p>
 
             {/* CTA Buttons */}
